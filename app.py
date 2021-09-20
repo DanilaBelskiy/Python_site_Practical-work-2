@@ -24,7 +24,7 @@ def hello_with_name(name):
 def dict_page():
     if request.method == 'POST':
         word = request.form["word"]
-        return render_template('result.html',word=my_words[word])
+        return render_template('result.html',word=my_words[word.lower()])
 
     return render_template('dict.html')
 
